@@ -5,18 +5,17 @@
 # Environment variables:
 # - CMAKE_VERSION: the version to install
 
-CMAKE_BASENAME=cmake-${CMAKE_VERSION}-Linux-x86_64
-CMAKE_FILE=${CMAKE_BASENAME}.tar.gz
-CMAKE_URL=https://cmake.org/files/v${CMAKE_VERSION%.*}/${CMAKE_FILE}
+# Update your local package index
+apt-get update
 
-wget -q --no-check-certificate ${CMAKE_URL}
+# Install PIP package
+apt-get install -y python-pip
 
-tar -xzf ${CMAKE_FILE}
+# Remove the local package index
+rm -rf /var/lib/apt/lists/*
 
-cp -fR ${CMAKE_BASENAME}/* /usr
+# Install CMake package
+pip install cmake==${CMAKE_VERSION}.*
 
-rm -rf ${CMAKE_BASENAME}
-rm ${CMAKE_FILE}
-
-# Make sure cmake is working properly
+# Print the installed version
 cmake --version
