@@ -8,5 +8,5 @@ services:
       dockerfile: ../Dockerfile
       args:
         CLANG_VERSION: 6.0-ubuntu18
-        CMAKE_VERSION: 3.11.3
+        CMAKE_VERSION: '3.11'
     image: odaceo/cmake:3.11-clang6.0-ubuntu18
