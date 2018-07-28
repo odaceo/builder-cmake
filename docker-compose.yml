@@ -2,7 +2,7 @@ version: '3'
 
 services:
 
-  3.11-clang6.0-ubuntu18:
+  3.12-clang6.0-ubuntu18:
     build:
       context: ./ubuntu-18
       dockerfile: ../Dockerfile
