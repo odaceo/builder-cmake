@@ -2,11 +2,11 @@ version: '3'
 
 services:
 
-  3.12-clang6.0-ubuntu18:
+  3.13-clang8.0-ubuntu18:
     build:
       context: ./ubuntu-18
       dockerfile: ../Dockerfile
       args:
-        CLANG_VERSION: 6.0-ubuntu18
-        CMAKE_VERSION: '3.12'
-    image: odaceo/cmake:3.12-clang6.0-ubuntu18
+        CLANG_VERSION: 8.0-ubuntu18
+        CMAKE_VERSION: '3.13'
+    image: odaceo/cmake:3.13-clang8.0-ubuntu18
